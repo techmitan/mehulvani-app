@@ -34,7 +34,7 @@ export default function BottomNav() {
         <div
           className={styles.bottom_menuBtn}
           onClick={() => {
-            window.open("http://newsroom.cg24x7.news");
+            window.open("https://newsroom.mehulvani.in");
           }}
         >
           <AccountCircleIcon /> <p>Account</p>

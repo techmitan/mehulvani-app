@@ -54,7 +54,7 @@ const Navbar = () => {
             </Link>
 
             <a
-              href="http://newsroom.cg24x7.news"
+              href="https://newsroom.mehulvani.in"
               target="_blank"
               rel="noreferrer"
             >
