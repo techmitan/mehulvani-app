@@ -1,0 +1,28 @@
+.poll_card {
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  border-radius: 7px;
+  margin: 20px auto;
+}
+
+.poll_card h4 {
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.radio_input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.radio_input label {
+  margin-left: 15px;
+}
+
+.poll_card button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

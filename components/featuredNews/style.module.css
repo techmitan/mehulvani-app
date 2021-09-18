@@ -1,0 +1,25 @@
+.featured_box{
+  
+    padding-bottom: 20px;
+    padding: 10px;
+    max-width: 600px;
+  
+
+}
+
+.featured_box h1{
+    color: purple;
+}
+
+.featured_box h2{
+    color: red;
+    margin-bottom: 10px;
+}
+
+.fImage{
+    height: 350px;
+    max-height: 350px;
+    width: 100%;
+    
+    
+}

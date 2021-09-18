@@ -1,0 +1,16 @@
+.wrapper{
+    height: 200px;
+    background-color: rgb(184, 212, 184);
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(24, 78, 46);
+    flex-direction: column;
+    padding: 20px;
+}
+
+.wrapper h3{
+    text-align: center;
+}

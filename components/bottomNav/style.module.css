@@ -1,0 +1,33 @@
+.bottom_nav{
+    display: none;
+   
+}
+
+.bottom_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.bottom_menuBtn{
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+    color: blueviolet;
+}
+
+.bottom_menuBtn p{
+    font-size: 12px;
+}
+
+@media (max-width: 768px){
+    .bottom_nav{
+        display: inline-block;
+         background-color: rgb(241, 236, 245);
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+    }
+}

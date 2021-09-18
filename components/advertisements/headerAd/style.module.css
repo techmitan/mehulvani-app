@@ -1,0 +1,21 @@
+.header_wrapper {
+  background-color: #ececec;
+  padding: 10px;
+}
+
+.header_main {
+    width: 60%;
+    margin: 0 auto;
+  
+}
+
+.header_main img{
+  max-height: 200px;
+}
+
+
+@media (max-width: 768px){
+  .header_main{
+    width: 95%;
+  }
+}

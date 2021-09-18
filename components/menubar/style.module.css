@@ -1,0 +1,32 @@
+.menubar{
+    font-size: 20px;
+}
+
+.menubar ul li{
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+ 
+}
+
+.menu_icon{
+    margin-right: 7px;
+    color: red;
+}
+
+.active{
+    color: blueviolet;
+    background-color: rgb(223, 204, 241);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.list img{
+    width: 30px;
+    margin-right: 7px;
+}
