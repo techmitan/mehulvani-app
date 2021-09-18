@@ -16,6 +16,7 @@ const Navbar = () => {
     setDate(Date.now());
   }, 1000);
 
+  
   return (
     <div className={`${styles.navbar_fluid}`}>
       <div className={`${styles.navbar}`}>
@@ -23,10 +24,7 @@ const Navbar = () => {
           <Link href="/">
             <a>
               <div className={styles.logo}>
-                <img
-                  src="https://i2.wp.com/cg24x7.news/wp-content/uploads/2021/08/20210805_222354.jpg?w=789&ssl=1"
-                  alt="logo"
-                />
+                <img src="/logo.JPG" alt="logo" />
               </div>
             </a>
           </Link>

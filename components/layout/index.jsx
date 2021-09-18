@@ -15,11 +15,15 @@ import TechMitan from "../techmitan";
 import SideVideo from "../sideVideo";
 import Donate from "../donate";
 
+
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
-      <MenubarMobile />
+      <div className={styles.stickyNav}>
+        <Navbar />
+        <MenubarMobile />
+      </div>
+
       <TickerNews />
       <HeaderAdvertisement />
       <div className={styles.layout_wrapper}>
@@ -32,7 +36,7 @@ const Layout = ({ children }) => {
         <div className={styles.layout_center}>
           {children}
           <div className={styles.center_footer}>
-            <Donate />
+            {/* <Donate /> */}
             <Footer />
 
             <TechMitan />

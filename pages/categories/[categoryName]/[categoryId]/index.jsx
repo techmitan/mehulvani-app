@@ -53,7 +53,7 @@ const NewsCategory = ({ data }) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>{`${category} | cg24x7 News`}</title>
+        <title>{`${category} | mehulvani`}</title>
 
         <meta name="description" content="news"></meta>
       </Head>

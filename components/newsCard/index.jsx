@@ -20,20 +20,21 @@ const NewsCard = ({ news, category }) => {
         {news.map((article) => {
           return (
             <div className={styles.news_item} key={article._id}>
-              <div className={styles.news_row}>
-                <div className={styles.news_heading}>
-                  <Link href={`/news/${article._id}`}>
-                    <a>
-                      <h3>{article.title}</h3>
-                    </a>
-                  </Link>
-                </div>
+              <Link href={`/news/${article._id}`}>
+                <a>
+                  <div className={styles.news_row}>
+                    <div className={styles.news_heading}>
+                      <a>
+                        <h3>{article.title}</h3>
+                      </a>
+                    </div>
 
-                <div className={styles.news_image}>
-                  <img src={article.imageUrl} alt="news" />
-                </div>
-              </div>
-
+                    <div className={styles.news_image}>
+                      <img src={article.imageUrl} alt="news" />
+                    </div>
+                  </div>
+                </a>
+              </Link>
               <div className={styles.news_meta}>
                 <div>{moment(article.published_date).format("LL")}</div>
                 <div>{/* <Share /> */}</div>

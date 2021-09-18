@@ -43,7 +43,7 @@ const Videoes = () => {
       <>
         <Head>
           <meta charSet="utf-8" />
-          <title>{"Our Videos | cg24x7 News"}</title>
+          <title>{"Our Videos | mehulvani"}</title>
           <meta name="description" content="news"></meta>
         </Head>
         <PageHeader title={"Videos"} />

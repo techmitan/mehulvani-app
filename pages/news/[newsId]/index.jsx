@@ -18,7 +18,7 @@ const NewsPage = ({ data, pathname }) => {
   const news = data.news;
   const relatedNews = data.relatedNews;
 
-  const location = `http://mehulvani.in${pathname}`;
+  const location = `https://mehulvani.in${pathname}`;
 
   const disqusShortname = "dsq-count-scr";
 
@@ -48,21 +48,21 @@ const NewsPage = ({ data, pathname }) => {
         <meta name="_token" content="" />
         <meta name="robots" content="noodp" />
         <meta property="title" content={news.title} />
-        <meta property="quote" content={"cg24x7 news | हर खबर पर नजर"} />
+        <meta property="quote" content={"mehulvani - आम जनता की खबर"} />
         <meta name="description" content={news.content} />
         <meta property="image" content={news.imageUrl} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={news.title} />
-        <meta property="og:quote" content={"cg24x7 news | हर खबर पर नजर"} />
-        <meta property="og:hashtag" content={"#cg24x7news"} />
+        <meta property="og:quote" content={"mehulvani - आम जनता की खबर"} />
+        <meta property="og:hashtag" content={"#mehulvani"} />
         <meta property="og:image" content={news.imageUrl} />
         <meta content="image/*" property="og:image:type" />
         <meta property="og:url" content={location} />
-        <meta property="og:site_name" content="cg24x7 News" />
+        <meta property="og:site_name" content="mehulvani" />
         <meta
           property="og:description"
-          content={"cg24x7 news | हर खबर पर नजर"}
+          content={"mehulvani - आम जनता की खबर"}
         />
       </Head>
 
@@ -85,21 +85,7 @@ const NewsPage = ({ data, pathname }) => {
           </div>
         </div>
 
-        <div>
-          {news.location && (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: "20px",
-              }}
-            >
-              <LocationOnIcon color="secondary" />
-              {news.location}
-            </div>
-          )}
-
+        <div className={styles.meta2}>
           <div className={styles.share}>
             <Share
               title={news.title}
@@ -107,6 +93,22 @@ const NewsPage = ({ data, pathname }) => {
               user={news.author.full_name}
             />
           </div>
+
+          {news.location && (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "20px",
+                fontSize: "0.9rem",
+                color: "gray",
+              }}
+            >
+              <LocationOnIcon color="secondary" />
+              {news.location}
+            </div>
+          )}
         </div>
 
         <div className={styles.fImgContainer}>

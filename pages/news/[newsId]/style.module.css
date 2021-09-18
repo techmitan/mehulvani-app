@@ -12,6 +12,7 @@
   background-color: blueviolet;
   color: white;
   padding: 5px 10px;
+  border-radius: 7px;
 }
 
 .news_box p {
@@ -21,11 +22,19 @@
   color: #333333;
 }
 
+.meta2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .news_meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: gray;
 }
 
 .share {

@@ -4,6 +4,7 @@ import {
   WhatsappShareButton,
 } from "react-share";
 
+
 import { FacebookIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
 const Share = ({ url, title, user }) => {
@@ -11,15 +12,15 @@ const Share = ({ url, title, user }) => {
     <div>
       <FacebookShareButton
         url={url}
-        quote={`${user} की खबर --- ${title} | cg24x7 News - हर खबर पर नजर`}
-        hashtag="#cg24x7 News"
+        quote={`${user} की खबर --- ${title} | mehulvani - आम जनता की खबर `}
+        hashtag="#mehulvani.in"
       >
         <FacebookIcon size={30} round={true}></FacebookIcon>
       </FacebookShareButton>
       <span style={{ marginRight: "10px" }}></span>
       <WhatsappShareButton
         url={url}
-        title={`${user} की खबर --- ${title} | cg24x7 News - हर खबर पर नजर`}
+        title={`${user} की खबर --- ${title} | mehulvani - आम जनता की खबर`}
       >
         <WhatsappIcon size={30} round={true}></WhatsappIcon>
       </WhatsappShareButton>
@@ -27,7 +28,7 @@ const Share = ({ url, title, user }) => {
 
       <TwitterShareButton
         url={url}
-        title={`${user} की खबर --- ${title} | cg24x7 News - हर खबर पर नजर`}
+        title={`${user} की खबर --- ${title} | mehulvani - आम जनता की खबर`}
       >
         <TwitterIcon size={30} round={true}></TwitterIcon>
       </TwitterShareButton>

@@ -27,8 +27,8 @@
 .layout_center {
   flex: 2;
   margin: 1rem auto;
-  /* max-width: 60%; */
-  padding: 20px;
+  border-left: 1px solid rgb(204, 204, 204);
+  border-right: 1px solid rgb(204, 204, 204);
 }
 
 .heading {
@@ -55,6 +55,13 @@
 .footer_mobile {
   display: none;
   margin-top: 30px;
+}
+
+.stickyNav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3000;
 }
 
 @media (max-width: 768px) {
