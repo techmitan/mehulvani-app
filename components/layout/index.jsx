@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         <div className={styles.layout_center}>
           {children}
           <div className={styles.center_footer}>
-            {/* <Donate /> */}
+            <Donate />
             <Footer />
 
             <TechMitan />
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
           <SideAd2 />
           <div className={styles.footer_mobile}>
             <hr />
-
+            <Donate />
             <Footer />
             <SocialMediaIcons />
 
