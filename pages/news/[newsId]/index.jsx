@@ -118,7 +118,7 @@ const NewsPage = ({ data, pathname }) => {
             alt="news-image"
             width={1920}
             height={1080}
-            objectFit="cover"
+            // objectFit="fill"
           />
         </div>
 
