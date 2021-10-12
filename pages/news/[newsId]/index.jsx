@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
 import NewsCard from "../../../components/newsCard";
-import { DiscussionEmbed } from "disqus-react";
 import parse from "html-react-parser";
 import moment from "moment";
 import Share from "../../../components/share";
@@ -19,10 +18,6 @@ const NewsPage = ({ data, pathname }) => {
   const relatedNews = data.relatedNews;
 
   const location = `https://mehulvani.in${pathname}`;
-
-  const disqusShortname = "dsq-count-scr";
-
-  let disqusConfig = {};
 
   const myLoader = ({ src }) => {
     return news.imageUrl;
@@ -129,8 +124,6 @@ const NewsPage = ({ data, pathname }) => {
         <NewsAd />
 
         <WhatsAppGroup />
-
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
 
         <h2 style={{ marginTop: "30px", color: "blueviolet" }}>
           और भी खबरें ...

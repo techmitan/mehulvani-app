@@ -13,7 +13,7 @@ const WhatsAppGroup = () => {
           color="primary"
           endIcon={<WhatsAppIcon />}
           onClick={() => {
-            window.open("https://chat.whatsapp.com/I6TT9cAU6HR8raEprWTfVI");
+            window.open("https://chat.whatsapp.com/J3iwmHxqOQi9MIWpZMTEOT");
           }}
         >
           Join Whatsapp Now
