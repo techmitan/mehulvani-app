@@ -54,7 +54,7 @@ const CategoryNewsSlider = () => {
 
         {array.map((item) => {
           return (
-            <Link href="/">
+            <Link href="/" key={item}>
               <a>
                 <div className={styles.slide_card}>
                   <img
