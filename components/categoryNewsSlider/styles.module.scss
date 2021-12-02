@@ -1,0 +1,19 @@
+.slide {
+  .slide_card {
+    margin: 7px;
+    img {
+      aspect-ratio: 16/9;
+    }
+
+    .headline {
+      font-size: 1rem;
+      display: block !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+  }
+}

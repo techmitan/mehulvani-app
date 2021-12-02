@@ -1,9 +1,7 @@
 import React from "react";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 import { useState, useEffect } from "react";
 import { baseAPI } from "../../config";
-// import { Link } from "react-router-dom";
-// import { useLocation } from "react-router-dom";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -11,14 +9,13 @@ const Menubar = () => {
   const [categories, setCategories] = useState([]);
 
   const router = useRouter();
-  const { pathname } = router;
-  const splitLocation = pathname.split("/");
+  const { asPath } = router;
+  const splitLocation = asPath.split("/");
 
   useEffect(() => {
     const getCat = async () => {
-    
       const response = await fetch(`${baseAPI}/api/category?isPublished=true`);
-    
+
       const data = await response.json();
       setCategories(data.categories);
     };
@@ -38,9 +35,9 @@ const Menubar = () => {
               <Link href={`/categories/${category.title}/${category._id}`}>
                 <a>
                   <div className={styles.list}>
-                    {category.imageUrl && (
+                    {/* {category.imageUrl && (
                       <img src={category.imageUrl} alt="category" />
-                    )}
+                    )} */}
 
                     {category.title}
                   </div>

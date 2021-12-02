@@ -3,7 +3,8 @@ import Head from "next/head";
 import FeaturedNews from "../components/featuredNews";
 import NewsCard from "../components/newsCard";
 import { baseAPI } from "../config";
-
+import FeaturedNewsSlider from "../components/featuredNewsSlider";
+import CategoryNewsSlider from "../components/categoryNewsSlider";
 
 const Home = ({ data }) => {
   const news = data.news;
@@ -18,9 +19,9 @@ const Home = ({ data }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <FeaturedNews />
+      {/* <FeaturedNews /> */}
 
-      {/* <FeaturedNewsSlider /> */}
+      <FeaturedNewsSlider />
 
       <>
         {news.map((item, index) => {
@@ -29,6 +30,7 @@ const Home = ({ data }) => {
           );
         })}
       </>
+      {/* <CategoryNewsSlider /> */}
     </>
   );
 };

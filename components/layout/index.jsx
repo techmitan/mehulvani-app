@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 import Menubar from "../menubar";
 import Navbar from "../navbar";
 import SideAd2 from "../advertisements/sideAd2";
@@ -15,7 +15,6 @@ import TechMitan from "../techmitan";
 import SideVideo from "../sideVideo";
 import Donate from "../donate";
 
-
 const Layout = ({ children }) => {
   return (
     <>
@@ -26,39 +25,32 @@ const Layout = ({ children }) => {
 
       <TickerNews />
       <HeaderAdvertisement />
-      <div className={styles.layout_wrapper}>
-        <div className={styles.layout_left}>
-          <Menubar />
 
-          <SocialMediaIcons />
+      {/* main page layout starts here */}
+      <div className={styles.layout}>
+        <div className={styles.left}>
+          <div className={styles.left_inner}>
+            <Menubar />
+            <SocialMediaIcons />
+          </div>
         </div>
-
-        <div className={styles.layout_center}>
+        <div className={styles.center}>
           {children}
           <div className={styles.center_footer}>
             <Donate />
             <Footer />
-
             <TechMitan />
           </div>
         </div>
-        <div className={styles.layout_right}>
-          <SideVideo />
-
-          <SideAd1 />
-          <Poll />
-          <SideAd2 />
-          <div className={styles.footer_mobile}>
-            <hr />
-            <Donate />
-            <Footer />
-            <SocialMediaIcons />
-
-            <TechMitan />
+        <div className={styles.right}>
+          <div className={styles.right_inner}>
+            <SideVideo />
+            <SideAd1 />
+            <Poll />
+            <SideAd2 />
           </div>
         </div>
       </div>
-
       <BottomNav />
     </>
   );

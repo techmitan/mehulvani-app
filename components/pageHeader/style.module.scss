@@ -1,0 +1,9 @@
+@import "configs/variables";
+
+.PageHeader {
+  color: $secondary;
+  border-left: 7px solid $primary;
+  padding-left: 5px;
+  margin: 15px auto;
+  margin-left: 15px;
+}

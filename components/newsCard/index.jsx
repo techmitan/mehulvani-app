@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./style.module.css";
-// import Share from "../share";
+import styles from "./style.module.scss";
 import moment from "moment";
 import Link from "next/link";
 
@@ -30,6 +29,10 @@ const NewsCard = ({ news, category }) => {
                     </div>
 
                     <div className={styles.news_image}>
+                      {/* <img
+                        src="https://images.news18.com/ibnlive/uploads/2019/09/news18-home-og.jpg"
+                        alt="headlines-one"
+                      /> */}
                       <img src={article.imageUrl} alt="news" />
                     </div>
                   </div>
@@ -37,7 +40,6 @@ const NewsCard = ({ news, category }) => {
               </Link>
               <div className={styles.news_meta}>
                 <div>{moment(article.published_date).format("LL")}</div>
-                <div>{/* <Share /> */}</div>
               </div>
             </div>
           );

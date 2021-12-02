@@ -1,0 +1,17 @@
+.wrapper {
+  background: rgb(2, 0, 36);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background: #fd0340;
+  background: -webkit-linear-gradient(top left, #fd0340, #0d0fc6);
+  background: -moz-linear-gradient(top left, #fd0340, #0d0fc6);
+  background: linear-gradient(to bottom right, #fd0340, #0d0fc6);
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  a:hover{
+      color: red;
+  }
+}

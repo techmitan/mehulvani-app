@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 import NewsCard from "../../../components/newsCard";
 import parse from "html-react-parser";
 import moment from "moment";
@@ -61,11 +61,11 @@ const NewsPage = ({ data, pathname }) => {
         />
       </Head>
 
-      <div className={styles.news_box}>
-        <span className={styles.category}>
+      <div className={styles.news}>
+        <div className={styles.category}>
           {news.category && news.category.title}
-        </span>
-        <h1>{news.title}</h1>
+        </div>
+        <h1 className={styles.newsTitle}>{news.title}</h1>
         <div className={styles.news_meta}>
           <div className={styles.news_date}>
             <TodayIcon />
@@ -79,7 +79,6 @@ const NewsPage = ({ data, pathname }) => {
             <div>{news.author.full_name}</div>
           </div>
         </div>
-
         <div className={styles.meta2}>
           <div className={styles.share}>
             <Share
@@ -105,7 +104,6 @@ const NewsPage = ({ data, pathname }) => {
             </div>
           )}
         </div>
-
         <div className={styles.fImgContainer}>
           <Image
             loader={myLoader}
@@ -116,21 +114,22 @@ const NewsPage = ({ data, pathname }) => {
             // objectFit="fill"
           />
         </div>
-
-        <div className={styles.news_content}>{parse(news.content)}</div>
-
-        <hr style={{ marginBottom: "20px" }} />
-
-        <NewsAd />
-
-        <WhatsAppGroup />
-
-        <h2 style={{ marginTop: "30px", color: "blueviolet" }}>
-          और भी खबरें ...
-        </h2>
-
-        <NewsCard news={relatedNews} />
+        <div className={styles.news_article}>{parse(news.content)}</div>
       </div>
+
+      <hr style={{ marginBottom: "20px" }} />
+
+      <NewsAd />
+
+      <WhatsAppGroup />
+
+      <h2
+        style={{ marginTop: "30px", color: "blueviolet", marginLeft: "15px" }}
+      >
+        और भी खबरें ...
+      </h2>
+
+      <NewsCard news={relatedNews} />
     </>
   );
 };

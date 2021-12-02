@@ -1,0 +1,72 @@
+@import "configs/variables";
+@import "layouts/breakpoints";
+
+.stickyNav {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3000;
+}
+
+.layout {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.left {
+  width: 300px;
+  border-right: 1px solid $gray-dark;
+  padding-right: 15px;
+
+  .left_inner {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+    overflow-y: scroll;
+  }
+}
+
+.center {
+  flex-grow: 1;
+  width: calc(90vw - 600px);
+  max-width: 100%;
+  .center_footer {
+    display: inline-block;
+  }
+}
+
+.right {
+  width: 300px;
+  border-left: 1px solid $gray-dark;
+  position: sticky;
+  top: 100px;
+  overflow-y: scroll;
+  padding-left: 15px;
+
+  .right_inner{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
+    overflow-y: scroll;
+  }
+ 
+}
+
+// responsive
+@include md {
+  .left {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .center {
+    max-width: 100%;
+    width: 100% !important;
+  }
+  .layout {
+    width: 100%;
+  }
+}

@@ -1,3 +1,5 @@
+@import "configs/variables";
+@import "layouts/breakpoints";
 
 .category_title {
   padding: 10px;
@@ -12,10 +14,16 @@
   color: white;
 }
 
-
 .news_item {
   border-bottom: 1px solid rgb(204, 204, 204);
   padding: 20px;
+}
+
+.news_item:hover {
+  background-color: $primary-lighter;
+  .news_heading a {
+    color: $primary;
+  }
 }
 
 .news_row {
@@ -23,26 +31,27 @@
   grid-template-columns: 3fr 1fr;
 }
 
-.news_heading{
+.news_heading {
   align-self: center;
   margin-right: 10px;
-  font-size: 0.9rem;
-}
-
-.news_image {
-  align-self: center;
-  width: 140px;
-  height: 78px;
- 
+  font-size: $base-font-size;
+  color: $black;
+  display: block !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .news_image img {
+  aspect-ratio: 16/9;
   border-radius: 7px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* width: 100%;
+  height: 100%; */
+  /* object-fit: cover; */
 }
-
 
 .news_meta {
   margin-top: 20px;
