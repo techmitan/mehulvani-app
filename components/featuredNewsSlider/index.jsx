@@ -4,12 +4,31 @@ import styles from "./style.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+
 import { baseAPI } from "../../config";
 
 import Slider from "react-slick";
 import Link from "next/link";
 
 const FeaturedNews = () => {
+  const CustomPrevArrow = ({ className, onClick }) => {
+    return (
+      <div className={className} onClick={onClick}>
+        <ArrowBackIosIcon style={{ color: "white", fontSize: "20px" }} />
+      </div>
+    );
+  };
+
+  const CustomNextArrow = ({ className, onClick }) => {
+    return (
+      <div className={className} onClick={onClick}>
+        <ArrowForwardIosIcon style={{ color: "white", fontSize: "20px" }} />
+      </div>
+    );
+  };
   var settings = {
     // dots: true,
     infinite: true,
@@ -18,6 +37,8 @@ const FeaturedNews = () => {
     autoplay: true,
     speed: 3000,
     autoplaySpeed: 500,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   const [featuredNews, setFeaturedNews] = useState([]);
@@ -56,20 +77,3 @@ const FeaturedNews = () => {
 };
 
 export default FeaturedNews;
-
-{
-  /* <Link href="/">
-          <a>
-            <img
-              src="https://images.indianexpress.com/2021/11/parliament-6.jpg"
-              alt="headlines-one"
-            />
-            <div className={styles.headline}>
-              <h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
-                ex?
-              </h1>
-            </div>
-          </a>
-        </Link> */
-}

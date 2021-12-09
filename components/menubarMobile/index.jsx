@@ -26,9 +26,9 @@ const MenubarMobile = () => {
               <Link href={`/categories/${category.title}/${category._id}`}>
                 <a>
                   <div className={styles.list}>
-                    {category.imageUrl && (
+                    {/* {category.imageUrl && (
                       <img src={category.imageUrl} alt="category" />
-                    )}
+                    )} */}
                     {category.title}
                   </div>
                 </a>
