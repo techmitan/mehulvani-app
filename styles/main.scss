@@ -7,3 +7,35 @@
 
 
 // layouts
+
+
+
+.customSlider .slick-arrow.slick-prev {
+  background-color: rgb(255, 30, 0);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  left: 16px;
+  z-index: 10;
+}
+
+.customSlider .slick-arrow.slick-next {
+  background-color: rgb(255, 30, 0);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  right: 16px;
+  z-index: 10;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+

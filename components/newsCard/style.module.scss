@@ -63,7 +63,10 @@
 
 @media (max-width: 768px) {
   .news_image img {
-    width: 150px;
-    height: 84px;
+    width: 100px;
+    // height: 84px;
+  }
+  .news_heading{
+    font-size: 12px;
   }
 }

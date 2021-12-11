@@ -19,32 +19,3 @@
   }
 }
 
-
-.slide .slick-arrow.slick-prev {
-  background-color: rgb(0, 76, 255);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  left: 16px;
-  z-index: 10;
-}
-
-.slide .slick-arrow.slick-next {
-  background-color: rgb(0, 76, 255);
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  right: 16px;
-  z-index: 10;
-}
-
-.slick-prev::before,
-.slick-next::before {
-  display: none;
-}

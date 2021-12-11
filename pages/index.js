@@ -21,7 +21,7 @@ const Home = ({ data }) => {
       </Head>
       {/* <FeaturedNews /> */}
 
-      {/* <FeaturedNewsSlider /> */}
+      <FeaturedNewsSlider />
 
       <>
         {news.map((item, index) => {

@@ -29,10 +29,6 @@ const NewsCard = ({ news, category }) => {
                     </div>
 
                     <div className={styles.news_image}>
-                      {/* <img
-                        src="https://images.news18.com/ibnlive/uploads/2019/09/news18-home-og.jpg"
-                        alt="headlines-one"
-                      /> */}
                       <img src={article.imageUrl} alt="news" />
                     </div>
                   </div>

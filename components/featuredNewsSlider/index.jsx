@@ -36,7 +36,7 @@ const FeaturedNews = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 3000,
-    autoplaySpeed: 500,
+    autoplaySpeed: 1000,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
   };
@@ -55,11 +55,11 @@ const FeaturedNews = () => {
     getNews();
   }, []);
   return (
-    <div className={styles.slide}>
+    <div className={`${styles.slide} customSlider`}>
       <Slider {...settings}>
         {featuredNews.map((item) => {
           return (
-            <div key={item._id}>
+            <div key={item._id} className="">
               <Link href={`/news/${item._id}`}>
                 <a>
                   <img src={item.imageUrl} alt="featured-news" />
