@@ -62,14 +62,29 @@ const NewsPage = ({ data, pathname }) => {
       </Head>
 
       <div className={styles.news}>
-        <div className={styles.category}>
-          {news.category && news.category.title}
+        <div className="flex items-center justify-between">
+          <div className="bg-blue-600 text-white px-4 py-1 rounded-md">
+            {news.category && news.category.title}
+          </div>
+          <div>
+            <Share
+              title={news.title}
+              url={location}
+              user={news.author.full_name}
+            />
+          </div>
         </div>
-        <h1 className={styles.newsTitle}>{news.title}</h1>
-        <div className={styles.news_meta}>
-          <div className={styles.news_date}>
-            <TodayIcon />
-            {moment(news.published_date).format("LL")}
+
+        <h1 className="text-2xl mt-2 font-bold">{news.title}</h1>
+
+        <div className="flex items-center justify-between mb-1">
+          <div className={styles.meta2}>
+            {news.location && (
+              <div className="flex items-center">
+                <LocationOnIcon color="secondary" />
+                {news.location}
+              </div>
+            )}
           </div>
           <div className={styles.news_author}>
             <Avatar
@@ -79,31 +94,7 @@ const NewsPage = ({ data, pathname }) => {
             <div>{news.author.full_name}</div>
           </div>
         </div>
-        <div className={styles.meta2}>
-          <div className={styles.share}>
-            <Share
-              title={news.title}
-              url={location}
-              user={news.author.full_name}
-            />
-          </div>
 
-          {news.location && (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: "20px",
-                fontSize: "0.9rem",
-                color: "gray",
-              }}
-            >
-              <LocationOnIcon color="secondary" />
-              {news.location}
-            </div>
-          )}
-        </div>
         <div className={styles.fImgContainer}>
           <Image
             loader={myLoader}
@@ -113,6 +104,10 @@ const NewsPage = ({ data, pathname }) => {
             height={1080}
             // objectFit="fill"
           />
+        </div>
+        <div className="text-center mt">
+          <TodayIcon />
+          {moment(news.published_date).format("LL")}
         </div>
         <div className={styles.news_article}>{parse(news.content)}</div>
       </div>

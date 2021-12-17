@@ -1,25 +1,26 @@
 .menubar {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(241, 233, 241);
+  background-color: #2563eb;
 }
 
 .menubar ul {
   display: flex;
   align-items: center;
   overflow-x: scroll;
-  padding: 15px;
+  padding: 10px;
   list-style-type: none;
 }
 
 .menubar ul li {
- padding-right: 15px;
+ padding-right: 4px;
  flex-shrink: 0;
  display: flex;
+ font-size: 10px;
 }
 
 .menubar a{
-  color: blueviolet;
+  color: white;
   font-weight: bold;
 }
 

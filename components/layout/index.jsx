@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         <MenubarMobile />
       </div>
 
-      <TickerNews />
+      {/* <TickerNews /> */}
       <HeaderAdvertisement />
 
       {/* main page layout starts here */}

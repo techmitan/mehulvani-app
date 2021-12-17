@@ -6,40 +6,48 @@ import Link from "next/link";
 const NewsCard = ({ news, category }) => {
   return (
     <>
-      <div className={styles.news_card}>
+      <div>
         {category && (
-          <div className={styles.category_title}>
-            <h3>{category.title}</h3>
-            <Link href={`/categories/${category.title}/${category._id}`}>
-              <a>और पढ़ें...</a>
-            </Link>
+          <div className="border-b-4 px-2 pb-1 border-red-600 font-bold">
+            <span className="text-2xl text-black">{category.title}</span>
           </div>
         )}
 
         {news.map((article) => {
           return (
-            <div className={styles.news_item} key={article._id}>
-              <Link href={`/news/${article._id}`}>
-                <a>
-                  <div className={styles.news_row}>
-                    <div className={styles.news_heading}>
-                      <a>
-                        <h3>{article.title}</h3>
-                      </a>
-                    </div>
-
-                    <div className={styles.news_image}>
-                      <img src={article.imageUrl} alt="news" />
+            <Link href={`/news/${article._id}`} key={article._id}>
+              <a>
+                <div className="border-b-2 p-2 bg-slate-50">
+                  <div className="flex items-center justify-between ">
+                    <h2 className="w-3/4">{article.title}</h2>
+                    <div className="w-1/4">
+                      <img
+                        className="w-28 aspect-video"
+                        src={article.imageUrl}
+                        alt="news-image"
+                      />
                     </div>
                   </div>
-                </a>
-              </Link>
-              <div className={styles.news_meta}>
-                <div>{moment(article.published_date).format("LL")}</div>
-              </div>
-            </div>
+                  <div className="text-sm">
+                    {moment(article.published_date).format("ll")}
+                  </div>
+                </div>
+              </a>
+            </Link>
           );
         })}
+
+        {category && (
+          <div className="flex justify-center my-2">
+            <Link href={`/categories/${category.title}/${category._id}`}>
+              <a>
+                <button className="text-red-600 border-red-500 border-2 py-1 px-4 rounded-xl">
+                  और भी पढ़ें...
+                </button>
+              </a>
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );

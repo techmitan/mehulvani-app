@@ -4,7 +4,11 @@ import FeaturedNews from "../components/featuredNews";
 import NewsCard from "../components/newsCard";
 import { baseAPI } from "../config";
 import FeaturedNewsSlider from "../components/featuredNewsSlider";
-import CategoryNewsSlider from "../components/categoryNewsSlider";
+// import CategoryNewsSlider from "../components/categoryNewsSlider";
+
+import NewNewsCard from "../components/newNewsCard";
+
+
 
 const Home = ({ data }) => {
   const news = data.news;
@@ -22,6 +26,10 @@ const Home = ({ data }) => {
       {/* <FeaturedNews /> */}
 
       <FeaturedNewsSlider />
+
+      {/* <div>
+        <NewNewsCard />
+      </div> */}
 
       <>
         {news.map((item, index) => {
