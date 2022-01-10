@@ -48,6 +48,15 @@ const Layout = ({ children }) => {
             <SideAd1 />
             <Poll />
             <SideAd2 />
+
+            <div style={{ marginTop: "25px" }}>
+              <iframe
+                src="https://widget.crictimes.org/"
+                style={{ width: "100%", minHeight: "450px" }}
+                frameBorder="0"
+                scrolling="yes"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
