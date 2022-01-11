@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
                 height="500"
                 width="300"
                 scrolling="no"
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
           </div>
