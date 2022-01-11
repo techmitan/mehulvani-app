@@ -18,7 +18,7 @@ import Donate from "../donate";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className={styles.stickyNav}>
+      <div className="sticky top-0 z-50">
         <Navbar />
         <MenubarMobile />
       </div>
@@ -36,14 +36,14 @@ const Layout = ({ children }) => {
         </div>
         <div className={styles.center}>
           {children}
-          <div className={styles.center_footer}>
-            <Donate />
-            <Footer />
-            <TechMitan />
-          </div>
-        </div>
-        <div className={styles.right}>
-          <div className={styles.right_inner}>
+
+          <div className="md:hidden">
+            <div className="w-full h-full my-10">
+              <iframe
+                style={{ width: "100%", minHeight: "450px" }}
+                src="https://maps.mapmyindia.com/corona"
+              ></iframe>
+            </div>
             <SideVideo />
             <SideAd1 />
             <Poll />
@@ -55,6 +55,45 @@ const Layout = ({ children }) => {
                 style={{ width: "100%", minHeight: "450px" }}
                 frameBorder="0"
                 scrolling="yes"
+              ></iframe>
+            </div>
+          </div>
+
+          <div className={styles.center_footer}>
+            <Donate />
+            <Footer />
+            <TechMitan />
+          </div>
+        </div>
+        <div className={styles.right}>
+          <div className={styles.right_inner}>
+            <div className="w-full h-full my-10">
+              <iframe
+                style={{ width: "100%", minHeight: "450px" }}
+                src="https://maps.mapmyindia.com/corona"
+              ></iframe>
+            </div>
+            <SideVideo />
+            <SideAd1 />
+            <Poll />
+            <SideAd2 />
+
+            <div style={{ marginTop: "25px" }}>
+              <iframe
+                src="https://widget.crictimes.org/"
+                style={{ width: "100%", minHeight: "450px" }}
+                frameBorder="0"
+                scrolling="yes"
+              ></iframe>
+            </div>
+
+            <div className="my-10">
+              <iframe
+                src="https://bit.ly/2DLbYIl"
+                height="500"
+                width="300"
+                scrolling="no"
+                frameborder="0"
               ></iframe>
             </div>
           </div>
